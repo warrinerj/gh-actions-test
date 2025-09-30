@@ -5,10 +5,11 @@ on:
   # Runs on pushes targeting the default branch
   push:
     paths:
-      - 'index.html'
+      - 'site/index.html'   # changed from 'index.html' (or use 'site/**' to trigger on any file in site/)
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -37,8 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: 'site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
