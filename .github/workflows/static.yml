@@ -5,11 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     paths:
-<<<<<<< HEAD
-      - 'site/index.html'   # changed from 'index.html' (or use 'site/**' to trigger on any file in site/)
-=======
       - '**.html'
->>>>>>> 2039cd7a0b3ff87c144de22e7e3704a1e9fd761a
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
